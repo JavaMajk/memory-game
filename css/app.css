@@ -84,7 +84,7 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #1a7902b6;
+    background: rgba(26, 121, 2, 0.7);
     font-size: 53px;
     transition: all 0.8s;
 }
