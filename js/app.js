@@ -66,7 +66,7 @@ const addToOpenCards = (selected) => {
 }
 
 const matchLock = () => {
-    $("ul.deck li.show").addClass("match bounce noClick");
+    $("ul.deck li.show").addClass("match noClick");
     $("ul.deck li.show").removeClass("flipInY show open");
     deck.removeClass("noClick");
     openCards = [];
