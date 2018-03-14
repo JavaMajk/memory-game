@@ -1,4 +1,5 @@
 const deck = $(".deck");
+const modal = $(".modal");
 let card = $(".card");
 let cards = [...card];
 let openCards = [];
@@ -66,7 +67,7 @@ const addToOpenCards = (selected) => {
 }
 
 const matchLock = () => {
-    $("ul.deck li.show").addClass("match noClick");
+    $("ul.deck li.show").addClass("bounce match noClick");
     $("ul.deck li.show").removeClass("flipInY show open");
     deck.removeClass("noClick");
     openCards = [];
@@ -92,9 +93,12 @@ const increment = () => {
 const finito = () => {
     if (matches === 8) {
         console.log("Thass itt!");
+        modal.css('display', 'block');
+        $(".total").html(moves);
     }
 }
 
 const restart = () => {
     window.location.reload(false);
 }
+
