@@ -6,6 +6,8 @@ let openCards = [];
 let counter = 0;
 let moves = 0;
 let matches = 0;
+let timerInterval = null;
+let seconds = 0;
 
 cards = shuffle(cards); //use shuffle function to shuffle cards array
 deck.append(cards); //append shuffled array to the DOM
@@ -46,6 +48,7 @@ deck.on('click', (e) => {
     addToOpenCards(selected);
     increment();
     finito();
+    start();
 });
 
 const displaySymbol = (selected) => selected.addClass("flipInY open show noClick");
@@ -87,6 +90,12 @@ const increment = () => {
     if (counter % 2 === 0) {
         moves = counter / 2;
     }
+    if (counter > 20) {
+        $("#starThree").removeClass("fa").addClass("far");
+    } 
+    if (counter > 30) {
+        $("#starTwo").removeClass("fa").addClass("far");
+    }
     $(".moves").html(moves);
 }
 
@@ -95,10 +104,24 @@ const finito = () => {
         console.log("Thass itt!");
         modal.css('display', 'block');
         $(".total").html(moves);
+        $(".ttime").html(seconds);
+        $(".rating").html($(".stars"));
+        stop();
     }
 }
 
 const restart = () => {
     window.location.reload(false);
+}
+
+let countSeconds = () => $("#seconds").html(++seconds);
+
+function start() {
+  timerInterval = setInterval(countSeconds, 1000);
+  start = function() {};  
+}
+
+const stop = () => {
+  clearInterval(timerInterval);
 }
 

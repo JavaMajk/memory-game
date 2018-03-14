@@ -75,7 +75,6 @@ em {
     }
 
 .deck .card.open {
-    transform: rotateY(0);
     background: #cbc400;
     cursor: default;
     transition: all 0.2s;
@@ -109,7 +108,10 @@ em {
     padding: 6px 12px;
     border-radius: 8px;
     box-shadow: 3px 6px 34px 10px rgba(46, 61, 73, 0.5);
-}
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    }
 
 .score-panel .stars {
     margin: 0;
@@ -125,10 +127,21 @@ em {
     color: gold;
 }
 
+/* .move {
+    
+} */
+
 .restart {
-    float: right;
+    
     cursor: pointer;
     font-size: 24px;
+    /* border: 1px solid pink; */
+}
+
+.timer {
+    flex: 2;
+    /* border: 1px solid pink; */
+    text-align: center;
 }
 
  /* The Modal (background) */
@@ -159,6 +172,8 @@ em {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
+    text-align: center;
+    font-size: 21px;
 }
 
 .modal .modal-content p {
@@ -170,6 +185,20 @@ em {
     border-radius: 6px;
     background-color: rgba(52, 126, 52, 0.899);
     color: #d7d7d7;
+}
+
+.modal .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 3px 0 6px;
+    font-size: 24px;
+}
+
+.modal .stars li {
+    list-style: none;
+    display: inline-block;
+    color: gold;
 }
 
 @keyframes animatetop {

@@ -5,7 +5,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
     <title>Crypto Match</title>
     <meta name="description" content="">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet"
@@ -22,15 +22,15 @@
 
         <section class="score-panel">
         	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star" id="starOne"></i></li>
+        		<li><i class="fa fa-star" id="starTwo"></i></li>
+        		<li><i class="fa fa-star" id="starThree"></i></li>
         	</ul>
 
-        	<span class="moves">0</span> Moves
-
+        	<div class = "move"><span class="moves">0</span> Moves</div>
+            <div class="timer"><span id="seconds">0</span> Seconds</div>
             <div class="restart" onclick="restart()">
-        		<i class="fa fa-repeat"></i>
+        		<i class="fas fa-redo"></i>
         	</div>
         </section>
 
@@ -89,9 +89,11 @@
     <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                    <p>Good Job! You have matched all the cards in <em class="total"> </em> moves.</p>
+                    <p>Good Job!</p>
+                     <p>You have matched all the cards in <em class="total"> </em> &nbsp;moves, over <em class="ttime"> </em> &nbsp;seconds.</p>
+                    <p>You earned a<span class="rating"> </span> rating.</p>
                 <div class="restart" onclick="restart()">
-                    Replay Game <i class="fa fa-repeat"></i>
+                    Replay Game <i class="fas fa-redo"></i>
                 </div>
             </div>
         </div>
