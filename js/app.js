@@ -96,6 +96,9 @@ const increment = () => {
     if (counter > 30) {
         $("#starTwo").removeClass("fa").addClass("far");
     }
+    if (counter > 40) {
+        $("#starOne").removeClass("fa fa-star").addClass("fas fa-star-half");
+    }
     $(".moves").html(moves);
 }
 
@@ -123,5 +126,9 @@ function start() {
 
 const stop = () => {
   clearInterval(timerInterval);
+}
+
+const hideWelcome = () => {
+    $(".welcome").css("display", "none");
 }
 
