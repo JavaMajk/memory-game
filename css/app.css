@@ -259,3 +259,44 @@ em {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
+
+@media only screen and (max-width: 600px) {
+    .deck {
+        width: 360px;
+        height: 360px;
+        min-height: 280px;
+        padding: 18px;
+    }
+
+    .deck .card {
+    height: 65px;
+    width: 65px;
+    transition: background 0.6s;
+    }
+
+    .deck .card.show {
+        font-size: 43px;
+    }
+
+    .deck .card.match {
+    font-size: 43px;
+}
+
+.modal-content {
+    margin: 30% auto; /* 15% from the top and centered */
+    border-radius: 12px;
+    padding: 22px;
+    width: 90%; /* Could be more or less, depending on screen size */
+    }
+
+    .welcome-content {
+       width: 90%;
+    }
+
+    .koala {
+        width: 93%;
+        height: 85%;
+        margin: 3% 3%;
+    }
+    
+}
