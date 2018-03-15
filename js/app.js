@@ -63,7 +63,7 @@ const addToOpenCards = (selected) => {
         deck.addClass("noClick");
         if (openCards[0].html() === openCards[1].html()) {
             matchLock();
-        } else if (openCards[0].html() != openCards[1].html()) {
+        } else {
             reHide();
         }
     }
@@ -103,14 +103,15 @@ const increment = () => {
 }
 
 const finito = () => {
-    if (matches === 8) {
+    if (matches === 8) {setTimeout(() => {
         console.log("Thass itt!");
         modal.css('display', 'block');
         $(".total").html(moves);
         $(".ttime").html(seconds);
         $(".rating").html($(".stars"));
         stop();
-    }
+    }, 1300);
+}
 }
 
 const restart = () => {
@@ -131,4 +132,3 @@ const stop = () => {
 const hideWelcome = () => {
     $(".welcome").css("display", "none");
 }
-
