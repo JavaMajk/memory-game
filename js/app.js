@@ -1,3 +1,4 @@
+// Create all necessary variables
 const deck = $(".deck");
 const modal = $(".modal");
 let card = $(".card");
@@ -38,24 +39,23 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+// Listen for clicks in deck area
 deck.on('click', (e) => {
     let selected = $(e.target);
     if (selected.hasClass("deck")) {
         return false;
     }
-    // selected.addClass("flipInX");
     displaySymbol(selected);
     addToOpenCards(selected);
     increment();
     finito();
     start();
 });
-
+// Function to diaplay the card
 const displaySymbol = (selected) => selected.addClass("flipInY open show noClick");
 
-
+// Function to add cards that are open to the 'selected' array
 const addToOpenCards = (selected) => {
-   
     if (openCards.length < 2) {
         openCards.unshift(selected);
     }
@@ -68,7 +68,7 @@ const addToOpenCards = (selected) => {
         }
     }
 }
-
+// Function to lock cards if they were a match
 const matchLock = () => {
     $("ul.deck li.show").addClass("bounce match noClick");
     $("ul.deck li.show").removeClass("flipInY show open");
@@ -76,7 +76,7 @@ const matchLock = () => {
     openCards = [];
     matches++;
 }
-
+// Function to hide cards back if they did not match
 const reHide = () => { 
     setTimeout(() => {
         $("ul.deck li.show").removeClass("flipInY show open noClick");
@@ -84,7 +84,7 @@ const reHide = () => {
         openCards = [];
     }, 1000);
 }
-
+// Function to increment moves
 const increment = () => {
     counter++;
     if (counter % 2 === 0) {
@@ -101,7 +101,7 @@ const increment = () => {
     }
     $(".moves").html(moves);
 }
-
+// Function to run when all cards matched
 const finito = () => {
     if (matches === 8) {setTimeout(() => {
         console.log("Thass itt!");
@@ -113,22 +113,21 @@ const finito = () => {
     }, 1300);
 }
 }
-
+// Simple restart implementation to reload page from cache
 const restart = () => {
     window.location.reload(false);
 }
-
+// Timing functions
 let countSeconds = () => $("#seconds").html(++seconds);
-
 function start() {
   timerInterval = setInterval(countSeconds, 1000);
   start = function() {};  
 }
-
 const stop = () => {
   clearInterval(timerInterval);
 }
 
+//Hide Welcoming modal
 const hideWelcome = () => {
     $(".welcome").css("display", "none");
 }
