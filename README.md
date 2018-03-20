@@ -40,6 +40,7 @@ In unorganized order, a list of all the references used to complete the Portfoli
 - [ ] Make timer look nicer (animations etc)
 - [ ] Add score formula
 - [ ] Add restart without refreshing from cache but a function to reset count and etc
+- [ ] Add diffeerent messages based ont star rating (Ex. Try again, Good job, Great job...)
 
 ## Preview
 https://javamajk.github.io/memory-game/
