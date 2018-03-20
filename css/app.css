@@ -226,7 +226,7 @@ em {
     /* Black w/ opacity */
 }
 
-.koala {
+/* .koala {
     position: fixed;
     overflow: auto;
     width: 63%;
@@ -235,7 +235,7 @@ em {
     margin: 1% 18.5%;
     animation-name: animatetop;
     animation-duration: 0.9s;
-}
+} */
 
 /* Modal Content/Box */
 
@@ -301,12 +301,10 @@ em {
     }
     .modal-content {
         margin: 30% auto;
-        /* 15% from the top and centered */
         border-radius: 12px;
         padding: 22px;
         width: 90%;
-        /* Could be more or less, depending on screen size */
-    }
+        }
     .welcome-content {
         width: 90%;
     }

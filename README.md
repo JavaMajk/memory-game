@@ -37,8 +37,9 @@ In unorganized order, a list of all the references used to complete the Portfoli
 - [ ] Add sound effects for game
 - [ ] Improve Design/Responsivenes where possible
 - [ ] Add score keeping on localstorage
-- [ ] Make timer nicer
+- [ ] Make timer look nicer (animations etc)
 - [ ] Add score formula
+- [ ] Add restart without refreshing from cache but a function to reset count and etc
 
 ## Preview
 https://javamajk.github.io/memory-game/

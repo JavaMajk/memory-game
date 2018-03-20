@@ -39,6 +39,7 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+
 // Listen for clicks in deck area
 deck.on('click', (e) => {
     let selected = $(e.target);
@@ -51,6 +52,7 @@ deck.on('click', (e) => {
     finito();
     start();
 });
+
 // Function to diaplay the card
 const displaySymbol = (selected) => selected.addClass("flipInY open show noClick");
 
@@ -68,6 +70,7 @@ const addToOpenCards = (selected) => {
         }
     }
 }
+
 // Function to lock cards if they were a match
 const matchLock = () => {
     $("ul.deck li.show").addClass("bounce match noClick");
@@ -76,6 +79,7 @@ const matchLock = () => {
     openCards = [];
     matches++;
 }
+
 // Function to hide cards back if they did not match
 const reHide = () => { 
     setTimeout(() => {
@@ -84,6 +88,7 @@ const reHide = () => {
         openCards = [];
     }, 1000);
 }
+
 // Function to increment moves
 const increment = () => {
     counter++;
@@ -101,6 +106,7 @@ const increment = () => {
     }
     $(".moves").html(moves);
 }
+
 // Function to run when all cards matched
 const finito = () => {
     if (matches === 8) {setTimeout(() => {
@@ -113,10 +119,12 @@ const finito = () => {
     }, 1300);
 }
 }
+
 // Simple restart implementation to reload page from cache
 const restart = () => {
     window.location.reload(false);
 }
+
 // Timing functions
 let countSeconds = () => $("#seconds").html(++seconds);
 function start() {
