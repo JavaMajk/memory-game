@@ -31,7 +31,7 @@ In unorganized order, a list of all the references used to complete the Portfoli
 
 ### Credits
 * [Animate.css](https://daneden.github.io/animate.css/)
-* [Crypto Font](- https://cryptofont.com/#cf-ardr)
+* [Crypto Font](https://cryptofont.com/)
 
 ## Planned Changes or Improvements
 - [ ] Add sound effects for game
